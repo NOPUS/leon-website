@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Leon — Resume</title>
+    <meta name="description" content="Minimal resume of Leon from Munich, Germany. 17 years old and open to work." />
+    <meta name="color-scheme" content="light dark" />
+    <style>
+      :root {
+        --bg: #ffffff;
+        --fg: #0f172a; /* slate-900 */
+        --muted: #64748b; /* slate-500 */
+        --line: #e2e8f0; /* slate-200 */
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0b1220;
+          --fg: #e5e7eb;
+          --muted: #94a3b8;
+          --line: #1f2937;
+        }
+      }
+
+      html, body {
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      .container {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 32px 20px;
+      }
+
+      header h1 {
+        font-size: 2.25rem;
+        letter-spacing: -0.02em;
+        margin: 0;
+      }
+
+      .tagline {
+        margin-top: 8px;
+        color: var(--muted);
+      }
+
+      hr {
+        border: 0;
+        border-top: 1px solid var(--line);
+        margin: 24px 0;
+      }
+
+      section {
+        margin-top: 24px;
+      }
+
+      h2 {
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--muted);
+        margin: 0 0 8px 0;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      footer {
+        margin-top: 40px;
+      }
+
+      footer small {
+        color: var(--muted);
+      }
+
+      .avatar {
+        width: 96px;
+        height: 96px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 0 12px 0;
+        border: 1px solid var(--line);
+        background: #ffffff;
+      }
+
+      .avatar svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      .contact-link {
+        color: inherit;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="avatar" aria-label="Avatar of Leon">
+          <svg viewBox="0 0 128 128" role="img" aria-labelledby="avatarTitle" xmlns="http://www.w3.org/2000/svg">
+            <title id="avatarTitle">Young boy with dark hair and glasses</title>
+            <rect width="128" height="128" fill="none" />
+            <circle cx="64" cy="60" r="28" fill="#f2d3c2" />
+            <path d="M36 56c0-16 12-28 28-28s28 12 28 28c0 0-8-6-28-6s-28 6-28 6z" fill="#111827" />
+            <circle cx="50" cy="60" r="12" fill="none" stroke="#111827" stroke-width="4" />
+            <circle cx="78" cy="60" r="12" fill="none" stroke="#111827" stroke-width="4" />
+            <rect x="60" y="58" width="8" height="4" fill="#111827" />
+            <circle cx="50" cy="60" r="3" fill="#111827" />
+            <circle cx="78" cy="60" r="3" fill="#111827" />
+            <path d="M52 76c4 4 20 4 24 0" fill="none" stroke="#111827" stroke-width="3" stroke-linecap="round" />
+            <path d="M32 94c8-8 24-8 32-8s24 0 32 8v10H32V94z" fill="#e5e7eb" />
+          </svg>
+        </div>
+        <h1>Leon</h1>
+        <p class="tagline">Munich, Germany · 17 years old · Open to work</p>
+      </header>
+
+      <hr />
+
+      <main>
+        <section aria-labelledby="about-heading">
+          <h2 id="about-heading">About</h2>
+          <p>
+            I am Leon from Munich, Germany, and I am looking for a job. I am 17 years old.
+          </p>
+        </section>
+
+        <section aria-labelledby="skills-heading">
+          <h2 id="skills-heading">Skills</h2>
+          <p>HTML, CSS, JavaScript, SCSS · currently learning Python</p>
+        </section>
+      </main>
+
+      <footer>
+        <small>© <span id="year"></span> Leon</small>
+        <p><a class="contact-link" href="mailto:sachbe231@gmail.com">Contact me</a></p>
+      </footer>
+    </div>
+
+    <script>
+      // Set current year in footer without impacting minimalism
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+  </html>
+
+
